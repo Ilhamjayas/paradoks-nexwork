@@ -1,0 +1,6 @@
+"use client";
+import { CartesianGrid, Line, LineChart, PolarAngleAxis, PolarGrid, Radar, RadarChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { readinessMetrics, weeklyProgress } from "@/src/data/selfProgress";
+
+export function ReadinessRadar() { return <div className="h-72 w-full"><ResponsiveContainer width="100%" height="100%"><RadarChart data={readinessMetrics}><PolarGrid stroke="#DCE7F2" /><PolarAngleAxis dataKey="label" tick={{ fontSize: 10, fill: "#63778E" }} /><Radar dataKey="value" stroke="#0B4EA2" fill="#2A8CFF" fillOpacity={0.2} strokeWidth={2.5} /><Tooltip /></RadarChart></ResponsiveContainer></div>; }
+export function WeeklyProgressChart() { return <div className="h-72 w-full"><ResponsiveContainer width="100%" height="100%"><LineChart data={weeklyProgress} margin={{ top: 8, right: 10, left: -20, bottom: 0 }}><CartesianGrid strokeDasharray="3 7" stroke="#DCE7F2" /><XAxis dataKey="week" tick={{ fontSize: 11, fill: "#6C7E91" }} axisLine={false} tickLine={false} /><YAxis domain={[40,100]} tick={{ fontSize: 11, fill: "#6C7E91" }} axisLine={false} tickLine={false} /><Tooltip /><Line type="monotone" dataKey="score" stroke="#0B4EA2" strokeWidth={3} dot={{ r: 4, fill: "#FFD43B", stroke: "#0B4EA2", strokeWidth: 2 }} /></LineChart></ResponsiveContainer></div>; }

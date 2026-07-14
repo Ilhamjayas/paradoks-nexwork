@@ -58,3 +58,10 @@ export const blkMobileUnits: BlkMobileUnit[] = [
     route: "Tegal - Brebes - Slawi",
   },
 ];
+
+export const blkMobileSummary = {
+  nearest: "BLK Mobile 03",
+  distance: "18 km dari Surabaya",
+  nextVisit: "24 Agustus 2026",
+  openPrograms: 4,
+};

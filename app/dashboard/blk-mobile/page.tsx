@@ -1,8 +1,11 @@
 import { BusFront, MapPinned, Route, Users } from "lucide-react";
 import { SectionCard, StatCard, StatusBadge } from "@/src/components/dashboard/ui";
 import { blkMobileUnits } from "@/src/data/blkMobile";
+import { BlkMobileV2 } from "@/src/components/dashboard/blk-mobile-v2";
 
 export default function BlkMobilePage() {
+  return <BlkMobileV2 />;
+  /* Legacy fleet view retained temporarily.
   const totalCapacity = blkMobileUnits.reduce((sum, item) => sum + item.capacity, 0);
 
   return (
@@ -105,4 +108,5 @@ export default function BlkMobilePage() {
       </SectionCard>
     </div>
   );
+  */
 }

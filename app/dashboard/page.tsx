@@ -2,8 +2,12 @@ import { BarChart3, BusFront, MapPinned, Target } from "lucide-react";
 import { TrendLineChart } from "@/src/components/dashboard/charts";
 import { RiskMapGrid, SectionCard, StatCard, StatusBadge } from "@/src/components/dashboard/ui";
 import { regions, riskTrend } from "@/src/data/regions";
+import { DashboardOverviewV2 } from "@/src/components/dashboard/overview-v2";
+import { DashboardOverviewV3 } from "@/src/components/dashboard/overview-v3";
 
 export default function DashboardOverviewPage() {
+  return <DashboardOverviewV3 />;
+  /* Legacy overview kept below while the new personal dashboard is validated.
   const topRegions = [...regions].sort((a, b) => b.riskScore - a.riskScore).slice(0, 5);
 
   return (
@@ -91,4 +95,5 @@ export default function DashboardOverviewPage() {
       </SectionCard>
     </div>
   );
+  */
 }

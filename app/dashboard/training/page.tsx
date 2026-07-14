@@ -1,8 +1,11 @@
 import { Clock, GraduationCap, Target, Users } from "lucide-react";
 import { SectionCard, StatCard, StatusBadge } from "@/src/components/dashboard/ui";
 import { trainingRecommendations } from "@/src/data/training";
+import { TrainingCatalog } from "@/src/components/dashboard/training-catalog";
 
 export default function TrainingRecommendationPage() {
+  return <TrainingCatalog />;
+  /* Legacy recommendation table retained temporarily.
   const active = trainingRecommendations.filter((item) => item.status !== "Selesai");
   const participants = trainingRecommendations.reduce(
     (sum, item) => sum + item.estimatedParticipants,
@@ -100,4 +103,5 @@ export default function TrainingRecommendationPage() {
       </div>
     </div>
   );
+  */
 }
